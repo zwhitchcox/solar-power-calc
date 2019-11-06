@@ -28,7 +28,12 @@ export const DegreesInput = props => {
         setFakeVal(addDegree(val))
       }}
       onFocus={() => {
-        setFakeVal(removeDegree(value))
+        const withoutDegree = removeDegree(value)
+        if (withoutDegree === 0) {
+          setFakeVal("")
+        } else {
+          setFakeVal(withoutDegree)
+        }
       }}
       onChange={e => {
         setFakeVal(e.target.value)
