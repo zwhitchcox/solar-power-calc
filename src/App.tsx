@@ -19,7 +19,6 @@ const samplesPerDayInit = window.localStorage.samplesPerDay ? Number(window.loca
 const App: React.FC = () => {
   const [pvArrays, setPVArrays] = useState(pvArraysInit)
   const [lat, setLat] = useState(latInit)
-  const [samplesPerDay, setSamplesPerDay] = useState(samplesPerDayInit)
   const latAdjusted = toRadians(Number(lat))
   const pvArraysCleaned = pvArrays.map(pvArray => ({
     ...pvArray,
@@ -28,7 +27,6 @@ const App: React.FC = () => {
   }))
   window.localStorage.pvArrays = JSON.stringify(pvArrays)
   window.localStorage.lat = lat
-  window.localStorage.samplesPerDay = samplesPerDay
   return (
     <div className="App">
       <header>
@@ -43,11 +41,6 @@ const App: React.FC = () => {
         />
         </div>
         <div className="form-group">
-        <NumberInput
-          _label="Samples Per Day"
-          onChange={e => setSamplesPerDay(e.target.value)}
-          value={samplesPerDay}
-        />
         </div>
       </div>
       <PVArraysInfo
@@ -55,7 +48,7 @@ const App: React.FC = () => {
         setPVArrays={setPVArrays}
         pvArrayInit={pvArrayInit}
       />
-      <AverageOutputPerDayByMonth pvArrays={pvArraysCleaned} lat={latAdjusted} samplesPerDay={samplesPerDay} />
+      <AverageOutputPerDayByMonth pvArrays={pvArraysCleaned} lat={latAdjusted} />
     </div>
   );
 }

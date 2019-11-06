@@ -8,3 +8,15 @@ export const memoize = fn => {
     return cache[key] = fn(...args)
   }
 }
+
+export const memoizeLS = (prefix, fn) => {
+  return (...args) => {
+    const key = "memoizeLS1.1" + prefix + JSON.stringify(args)
+    if (window.localStorage[key]) {
+      return JSON.parse(window.localStorage[key])
+    }
+    const result = fn(...args)
+    window.localStorage[key] = JSON.stringify(result)
+    return result
+  }
+}

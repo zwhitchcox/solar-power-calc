@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { getAvgProdByMonth } from './energy-production'
+import { getAvgProdByMonth, getAvgProdByMonthLS } from './energy-production'
 import "./styles.css"
 
 
@@ -21,9 +21,9 @@ const monthLabels = [
   'Nov',
   'Dec',
 ]
-export const AverageOutputPerDayByMonth = ({pvArrays, lat, samplesPerDay}) => {
+export const AverageOutputPerDayByMonth = ({pvArrays, lat}) => {
   const getAvgProdsByMonth = pvArrays => pvArrays
-    .map(pvArray => getAvgProdByMonth({...pvArray, lat, samplesPerDay}))
+    .map(pvArray => getAvgProdByMonthLS({...pvArray, lat, samplesPerDay: 100}))
   const [avgProdByMonth, setAvgProdByMonth] =
     useState({
       calculating: false,
@@ -48,6 +48,7 @@ export const AverageOutputPerDayByMonth = ({pvArrays, lat, samplesPerDay}) => {
       })
     }, 0)
   }
+  console.log(avgProdByMonth)
 
   return (
     <div>
@@ -69,7 +70,7 @@ export const AverageOutputPerDayByMonth = ({pvArrays, lat, samplesPerDay}) => {
             <td>{i+1}.</td>
             {averageProduction.map((production, i) => <td key={i}>{truncate(production / 1000, 2)}</td>)}
           </tr>)}
-          {avgProdByMonth.time > 0 ?
+          {avgProdByMonth.time > .1 ?
           <tr>
             <td colSpan={13} style={{border: "none"}}>
                 <div className="calc-time">Calculation Time: {truncate(avgProdByMonth.time/1000, 2)} seconds</div>

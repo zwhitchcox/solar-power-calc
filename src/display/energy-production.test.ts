@@ -1,5 +1,5 @@
 import { test } from 'tezt'
-import { averageEnergyProductionByMonth } from './energy-production'
+// import { averageEnergyProductionByMonth } from './energy-production'
 
 test("calculate monthly averages", () => {
   const result = averageEnergyProductionByMonth({

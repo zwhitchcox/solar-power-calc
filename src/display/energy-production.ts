@@ -1,5 +1,5 @@
 import { calculateWHFactorForYear } from "../calculations/wh-factor"
-import { memoize } from "../util"
+import { memoize, memoizeLS } from "../util"
 
 
 const currentYear = new Date().getFullYear()
@@ -19,3 +19,5 @@ export const getAvgProdByMonth = memoize(pvArrayInfo => {
     })
     .map(whFactor => whFactor*watts)
 })
+
+export const getAvgProdByMonthLS = memoizeLS("getAvgProdByMonth", getAvgProdByMonth)
