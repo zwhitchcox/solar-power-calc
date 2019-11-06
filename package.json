@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "http://zwhitchcox.github.io/solar-power-calc",
+  "homepage": "https://solar-power-calc.com",
   "eslintConfig": {
     "extends": "react-app"
   },
