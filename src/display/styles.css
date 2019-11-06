@@ -1,0 +1,22 @@
+.display-header {
+  font-weight: normal;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+ td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 4px 6px;
+}
+
+.calculating {
+  text-align: center;
+  font-style: italic;
+}

@@ -1,7 +1,9 @@
+    /*Big+Shoulders+Display|Lakki+Reddy|Lato|Liu+Jian+Mao+Cao|McLaren|Montserrat|Muli|Nunito|Open+Sans|Oswald|Raleway|Source+Sans+Pro|Ubuntu&display=swap" rel="stylesheet">*/
 body {
+  padding: 0 30px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-size: 20px;
+  font-family: Raleway, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -1,0 +1,19 @@
+.pv-arrays-header {
+  line-height: 1.5;
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.panels-group {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.array-number {
+  margin-right: 8px;
+}
