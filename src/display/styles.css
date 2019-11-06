@@ -20,3 +20,54 @@ th, td {
   text-align: center;
   font-style: italic;
 }
+
+.all-months-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.month-wrapper {
+  flex: 1 22%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 70px;
+}
+@media all and (min-width: 400px) {
+  .month-wrapper {
+    flex: 1 1 20%;
+  }
+}
+@media all and (min-width: 700px) {
+  .month-wrapper {
+    flex: 1 1 12%;
+    min-width: 70px;
+  }
+}
+
+@media all and (min-width: 1230px) {
+  .month-wrapper {
+    flex: 1 1 0;
+    min-width: 70px;
+  }
+}
+
+
+
+.month-label {
+  display: block;
+  font-weight: bold;
+}
+
+.month-data-wrapper {
+  border-bottom: 1px solid black;
+}
+.month-data {
+  display: block;
+  flex: 1 0 0;
+}
+
+
+.month-total {
+  font-weight: bold;
+}

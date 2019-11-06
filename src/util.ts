@@ -9,9 +9,20 @@ export const memoize = fn => {
   }
 }
 
+const memoizeLSPrefix = "memoizeLS"
+const memoizeLSVersion = "1"
+const savedVersion = window.localStorage.memoizeLSVersion
+if (typeof savedVersion !== "undefined" && savedVersion !== memoizeLSVersion) {
+  for (const key in window.localStorage) {
+    if (key.startsWith(memoizeLSPrefix)) {
+      delete window.localStorage[key]
+    }
+  }
+}
+
 export const memoizeLS = (prefix, fn) => {
   return (...args) => {
-    const key = "memoizeLS1.1" + prefix + JSON.stringify(args)
+    const key = memoizeLSPrefix + memoizeLSVersion + prefix + JSON.stringify(args)
     if (window.localStorage[key]) {
       return JSON.parse(window.localStorage[key])
     }
