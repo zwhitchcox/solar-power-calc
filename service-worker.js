@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/solar-power-calc/precache-manifest.7d3b55d3dfa9a51b2ca1613886aed897.js"
+  "/solar-power-calc/precache-manifest.f62a5ee93811e6d73d75942db772b81d.js"
 );
 
 self.addEventListener('message', (event) => {

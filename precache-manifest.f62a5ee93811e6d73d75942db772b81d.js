@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c433976f5bc9e8ff2bec1bfb5384886b",
+    "revision": "a52ca237d0c97da835db5829a85c8cf5",
     "url": "/solar-power-calc/index.html"
   },
   {
