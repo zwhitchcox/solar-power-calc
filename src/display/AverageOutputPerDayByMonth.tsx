@@ -69,11 +69,15 @@ export const AverageOutputPerDayByMonth = ({pvArrays, lat, samplesPerDay}) => {
             <td>{i+1}.</td>
             {averageProduction.map((production, i) => <td key={i}>{truncate(production / 1000, 2)}</td>)}
           </tr>)}
+          {avgProdByMonth.time > 0 ?
+          <tr>
+            <td colSpan={13} style={{border: "none"}}>
+                <div className="calc-time">Calculation Time: {truncate(avgProdByMonth.time/1000, 2)} seconds</div>
+            </td>
+          </tr>
+          : "" }
         </tbody>
       </table>
-      {avgProdByMonth.time > 0 ?
-        <div className="calc-time">Calculation Time: {truncate(avgProdByMonth.time/1000, 2)} seconds</div> : ""
-      }
     </>}
     </div>
   )

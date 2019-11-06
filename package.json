@@ -15,11 +15,14 @@
     "typescript": "3.6.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "http://zwhitchcox.github.io/solar-power-calc",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -37,6 +40,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.11",
+    "gh-pages": "^2.1.1",
     "tezt": "^1.1.0",
     "ts-node": "^8.4.1"
   }

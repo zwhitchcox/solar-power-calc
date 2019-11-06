@@ -10,7 +10,7 @@ import { NumberInput } from './ui/number-input';
 const pvArrayInit = {
   tilt: 0,
   orientation: "S",
-  watts: 100,
+  watts: 500,
 }
 const lsPVArrays = window.localStorage.pvArrays
 const pvArraysInit = lsPVArrays ? JSON.parse(lsPVArrays) : [pvArrayInit]
