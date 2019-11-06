@@ -102,13 +102,17 @@ const renderAvgProdByMonth = avgProdByMonth => {
 }
 
 const renderMonth = (production, i) => {
+  const underLine = production.length > 1 ? {
+    borderBottom: "1px solid black",
+  } : {}
   return (
     <div key={i} className="month-wrapper">
       <div className="month-label">{monthLabels[i]}</div>
-      <div className="month-data-wrapper">
+      <div style={underLine}>
         {production.map((prod, i) => (
           <div className="month-data" key={i}>
-            {i + 1}. {truncate(prod / 1000, 2)}</div>
+            {/* {production.length > 1 ? (i + 1) + ". " : ""} */}
+            {truncate(prod / 1000, 2)}</div>
         ))}
       </div>
       {renderTotal(production)}

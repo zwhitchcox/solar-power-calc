@@ -57,11 +57,9 @@ th, td {
 .month-label {
   display: block;
   font-weight: bold;
+  text-decoration: underline;
 }
 
-.month-data-wrapper {
-  border-bottom: 1px solid black;
-}
 .month-data {
   display: block;
   flex: 1 0 0;
