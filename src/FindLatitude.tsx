@@ -1,5 +1,4 @@
 import React from 'react'
-import has from "lodash/has"
 import { truncate } from './util';
 export const FindLatitude = ({setLat}) => (
   <a
@@ -10,6 +9,11 @@ export const FindLatitude = ({setLat}) => (
         try {
           navigator.geolocation.getCurrentPosition(position => {
             setLat(truncate(position.coords.latitude, 2))
+          }, error => {
+            window.open(
+              'https://www.latlong.net',
+              '_blank' // <- This is what makes it open in a new window.
+            );
           })
           e.preventDefault()
         } catch (e) {}
