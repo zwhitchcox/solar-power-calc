@@ -27,7 +27,7 @@ export const PVArraysInfo = ({pvArrays, setPVArrays, pvArrayInit}) => {
           key={i}
           setVal={setVal(i)}
           remove={removeArray(i)}
-          val={pvArrays[i]}
+          val={pvArray}
         />
         </div>
       ))}

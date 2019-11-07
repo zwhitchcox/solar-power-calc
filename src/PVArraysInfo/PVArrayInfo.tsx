@@ -3,6 +3,7 @@ import { orientationsToAzimuth } from '../calculations/maps'
 import { DegreesInput } from '../ui/degrees-input'
 import "./PVArrayInfo.css"
 import { NumberInput } from '../ui/number-input'
+import { ToolTip } from '../ui/tooltip'
 
 export const PVArrayInfo = ({remove, setVal, val}) => {
   return <>
@@ -11,6 +12,9 @@ export const PVArrayInfo = ({remove, setVal, val}) => {
         setVal={value => setVal("tilt", value)}
         _label="Tilt"
         value={val.tilt}
+      />
+      <ToolTip
+        text={"The angle of the panel from the ground"}
       />
     </div>
     <div className="form-group">
@@ -33,6 +37,9 @@ export const PVArrayInfo = ({remove, setVal, val}) => {
           )
         }
       </select>
+      <ToolTip
+        text={"The direction toward which the panel is tilted"}
+      />
     </div>
     <div className="form-group">
       <NumberInput
