@@ -5,8 +5,11 @@ import { AverageOutputPerDayByMonth } from './display/AverageOutputPerDayByMonth
 import { toRadians } from './calculations/util';
 import { orientationsToAzimuth } from './calculations/maps';
 import { DegreesInput } from './ui/degrees-input';
-import { NumberInput } from './ui/number-input';
+import { FindLatitude } from './FindLatitude';
 
+navigator.geolocation.getCurrentPosition(position => {
+  console.log(position)
+})
 const pvArrayInit = {
   tilt: 0,
   orientation: "S",
@@ -15,7 +18,6 @@ const pvArrayInit = {
 const lsPVArrays = window.localStorage.pvArrays
 const pvArraysInit = lsPVArrays ? JSON.parse(lsPVArrays) : [pvArrayInit]
 const latInit = window.localStorage.lat ? window.localStorage.lat : 0
-const samplesPerDayInit = window.localStorage.samplesPerDay ? Number(window.localStorage.samplesPerDay) : 100
 const App: React.FC = () => {
   const [pvArrays, setPVArrays] = useState(pvArraysInit)
   const [lat, setLat] = useState(latInit)
@@ -35,10 +37,12 @@ const App: React.FC = () => {
       <div>
         <div className="form-group">
         <DegreesInput
-          onChange={value => setLat(value)}
+          setVal={setLat}
           _label="Latitude"
           value={lat}
+          width={80}
         />
+        <FindLatitude setLat={setLat} />
         </div>
         <div className="form-group">
         </div>

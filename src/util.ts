@@ -31,3 +31,8 @@ export const memoizeLS = (prefix, fn) => {
     return result
   }
 }
+
+export const truncate = (num, precision) => {
+  const factor = 10**precision
+  return (num * factor | 0) / factor
+}

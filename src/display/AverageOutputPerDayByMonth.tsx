@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { getAvgProdByMonthLS } from './energy-production'
 import "./styles.css"
-import { memoize } from '../util'
+import { memoize, truncate } from '../util'
 
 
-const truncate = (num, precision) => {
-  const factor = 10**precision
-  return (num * factor | 0) / factor
-}
 const monthLabels = [
   'Jan',
   'Feb',
@@ -56,7 +52,7 @@ export const AverageOutputPerDayByMonth = ({pvArrays, lat}) => {
     <div>
     <button className="button" onClick={calculate}>Calculate</button>
     <h3 className="display-header">
-      Average Production Per Day By Month (kw/h)
+      Average Production Per Day  (kw/h)
     </h3>
     {avgProdByMonth.calculating ?
       renderCalculating() :

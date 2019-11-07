@@ -8,7 +8,7 @@ export const PVArrayInfo = ({remove, setVal, val}) => {
   return <>
     <div className="form-group">
       <DegreesInput
-        onChange={value => setVal("tilt", value)}
+        setVal={value => setVal("tilt", value)}
         _label="Tilt"
         value={val.tilt}
       />
