@@ -7,9 +7,6 @@ import { orientationsToAzimuth } from './calculations/maps';
 import { DegreesInput } from './ui/degrees-input';
 import { FindLatitude } from './FindLatitude';
 
-navigator.geolocation.getCurrentPosition(position => {
-  console.log(position)
-})
 const pvArrayInit = {
   tilt: 0,
   orientation: "S",
