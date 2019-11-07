@@ -45,7 +45,25 @@ th, td {
 @media all and (min-width: 700px) {
   .month-wrapper {
     flex: 1 1 12%;
-    min-width: 70px;
+    min-width: 100px;
+  }
+}
+@media all and (min-width: 840px) {
+  .month-wrapper {
+    flex: 1 1 12%;
+    min-width: 120px;
+  }
+}
+@media all and (min-width: 970px) {
+  .month-wrapper {
+    flex: 1 1 12%;
+    min-width: 140px;
+  }
+}
+@media all and (min-width: 1050px) {
+  .month-wrapper {
+    flex: 1 1 12%;
+    min-width: 160px;
   }
 }
 
