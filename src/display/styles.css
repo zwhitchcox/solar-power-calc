@@ -33,6 +33,9 @@ th, td {
   border-radius: 4px;
   min-width: 70px;
 }
+.month-wrapper {
+  margin: 5px;
+}
 @media all and (min-width: 400px) {
   .month-wrapper {
     flex: 1 1 20%;
