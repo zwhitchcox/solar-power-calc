@@ -6,7 +6,7 @@
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 300px;
+  width: 0px;
   background-color: #444;
   color: #fff;
   text-align: center;
@@ -21,6 +21,7 @@
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  width: 300px;
 }
 
 .tooltip-btn {

@@ -35,6 +35,7 @@ th, td {
 }
 .month-wrapper {
   margin: 5px;
+  box-sizing: border-box;
 }
 @media all and (min-width: 400px) {
   .month-wrapper {
